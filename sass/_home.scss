@@ -1,0 +1,64 @@
+.home{
+    grid-column: 1/-1;
+    background-color: #eee;
+
+
+    display: grid;
+    grid-template-columns: 1fr 40vw 1fr 40vw 1fr;
+
+    @media only screen and (max-width: $bp-phone) {
+        grid-template-rows: 30rem 33rem;
+    }
+
+    &__content{
+        grid-column: 2/3;
+        justify-self: center;
+        align-self: center;
+
+        @media only screen and (max-width: $bp-phone) {
+            grid-column: 2/5;
+            
+        }
+
+        &--heading{
+            font-size: 6.4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: $color-secondary;
+            font-family: var(--font-primary);
+            animation: movetoTop 1s ease;
+
+            @media only screen and (max-width: $bp-tab-port) {
+                font-size: 3.2rem
+            }
+        }
+        &--para{
+            font-size: 1.5rem;
+            color: #4f4f5a;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            animation: movetoTop 1s ease;
+        }
+    }
+
+    &__img{
+        display: grid;
+        grid-column: 4/5;
+        align-self: center;
+        justify-self: center;
+
+        @media only screen and (max-width: $bp-phone) {
+            grid-column: 2/5;
+        }
+
+    }
+    .img{
+        width: 100%;
+        animation: movetoTop 1s ease;
+        @media only screen and (max-width: $bp-phone) {
+           width: 70%;
+           justify-self: center;
+           align-self: center;
+        }
+    }
+}

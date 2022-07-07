@@ -1,0 +1,107 @@
+.card {
+    grid-column: 1/-1;
+    background-color: #eee;
+    margin-top: 5rem;
+    padding: 6rem;
+    grid-column-gap: 1.8rem;
+    display: grid;
+    // grid-gap: 1.5rem;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 35rem;
+
+
+
+    &__main {
+        grid-column: 2/5;
+        background: #ce1212;
+        color: white;
+        padding: 3rem;
+        margin-right: 1.5rem;
+
+        @media only screen and (max-width: $bp-tab-port) {
+            grid-column: 2/11;
+            margin-right: 0;
+            margin-bottom: 5rem;
+            
+        }
+
+
+        h3 {
+            font-weight: 700;
+            font-size: 3.4rem;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__sub {
+        text-align: center;
+        background: #fff;
+        padding: 4rem 3rem;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(55, 55, 63, 0.1);
+        transition: 0.3s;
+        height: 35rem;
+        margin: auto;
+
+        
+
+        .icon {
+            display: inline-block;
+            width: 3rem;
+            margin-bottom: 2rem;
+            height: 3rem;
+            stroke-width: 0;
+            fill: $color-primary;
+            -webkit-background-clip: text;
+            color: transparent;
+            @media only screen and (max-width: $bp-tab-port){
+                margin-bottom: 6rem;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0 0 3rem 0;
+            font-family: var(--font-secondary);
+            @media only screen and (max-width: $bp-tab-port){
+                margin-bottom: 4.5rem;
+            }
+        }
+        p{
+            font-size: 1.5rem;
+            color: #6c757d;
+        }
+
+
+        &-1 {
+            grid-column: 5/7;
+            @media only screen and (max-width: $bp-tab-port) {
+                grid-column: 2/11;
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-2 {
+            grid-column: 7/9;
+            @media only screen and (max-width: $bp-tab-port) {
+                grid-column: 2/11;
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-3 {
+            grid-column: 9/11;
+            @media only screen and (max-width: $bp-tab-port) {
+                grid-column: 2/11;
+                margin-bottom: 5rem;
+                
+            }
+        }
+    }
+}

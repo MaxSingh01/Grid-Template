@@ -1,0 +1,58 @@
+$color-default: #212529;
+$color-primary: #ce1212;
+$color-secondary: #37373f;
+
+:root{
+
+--font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+--font-primary: "Amatic SC", sans-serif;
+--font-secondary: "Inter", sans-serif;
+}
+
+
+
+
+
+
+$bp-desktop : 112.5em; //1800px
+$bp-tab-land: 75em;   // 1200px
+$bp-tab-port: 56.25em;   // 900px
+$bp-phone: 37.5em;    // 600px;
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--font-default);
+    color: $color-default;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    @media only screen and (max-width: $bp-tab-land) {
+        font-size: 56.2%
+    }
+    @media only screen and (max-width: $bp-tab-port) {
+        font-size: 50%
+    }
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 43.7%
+    }
+    @media only screen and (min-width: $bp-desktop) {
+        font-size: 75%;
+    }
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 8rem 65rem repeat(4,min-content) ;
+    grid-template-columns: repeat(12,1fr);
+
+    
+
+}

@@ -1,0 +1,78 @@
+.header {
+    grid-column: 2/12;
+    justify-self: center;
+    font-family: var(--font-secondary);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(10, 1fr);
+
+    &__heading {
+        justify-self: center;
+        margin: auto;
+        font-size: 2.8rem;
+        
+    }
+
+    &__navigation {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        grid-column: 3/9;
+
+        @media only screen and (max-width: $bp-phone) {
+            display: none;
+        }
+
+        
+
+        &__list {
+            cursor: pointer;
+            list-style: none;
+            font-size: 1.6rem;
+            justify-self: center;
+            color: #7f7f90;
+            font-weight: 600;
+            position: relative;
+            transition: width 2s;
+
+            a{
+                color: #7f7f90;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            
+            &:first-child::after{
+                @include list-after
+            }
+
+        &:hover{
+            
+            &::after{
+                @include list-after;
+                width: 5.2rem;
+             }
+             &:last-child::after{
+                width: 7.3rem;
+             }
+        }
+        
+
+         
+        }
+    }
+
+    &__btn {
+        grid-column: 9/-1;
+        align-self: center;
+        justify-self: center;
+        padding: .8rem 1.8rem; 
+        outline: unset;
+
+        border: unset;
+
+    }
+
+    .active{
+        color: black;
+    }
+}
